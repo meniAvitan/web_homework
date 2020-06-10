@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        body {
+            background-image: url("https://d3m9l0v76dty0.cloudfront.net/system/photos/1862563/original/8b6ae2b9b31f1f484e47d7ad7d689696.jpg");
+            background-size: cover;
+
+        }
+
+        table,
+        td {
+
+            border: 1px solid blue;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        td {
+            width: 40px;
+            height: 40px;
+            font-size: 23px;
+            text-align: center;
+        }
+
+        #green_td {
+            
+            color: crimson;
+        }
+        #green_td:hover{
+            background-color: rgb(98, 180, 16);
+        }
+
+        #red_td {
+            
+            color: rgb(98, 180, 16) ;
+        }
+        #red_td:hover{
+            background-color: crimson;
+        }
+        #calsic_td{
+            color: rgb(150, 133, 133);
+        }
+
+
+        h1 {
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>mutiplication table</h1>
+    
+        <table id="my_table"></table>
+    
+    <script type="text/javascript">
+
+        let table = document.getElementById("my_table");
+
+        let output = "";
+        for (var i = 1; i < 11; i++) {
+            output += "<tr>";
+            for (var j = 1; j < 11; j++) {
+                if ((i * j) < 40) {
+                    output += "<td id=green_td>" + i * j + "</td>";
+                }
+                else if ((i * j) > 70){
+                        output += "<td id=red_td>" + i * j + "</td>";
+                    }
+                    else{
+                        output += "<td id=clasic_td>" + i * j + "</td>";
+                    }    
+            }
+            output += "</tr>";
+        }
+        table.innerHTML = output;
+
+    </script>
+
+</body>
+
+</html>
